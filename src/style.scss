@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+//font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+//variable
+@import 'variable';
+
+//mixin
+@import 'mixin';
+
+//reset
+@import 'reset';
+
+//main scss
+@import 'main/header/header';
+@import 'main/visual/visual';
+@import 'main/footer/footer';
+
+//sub common layout
+// @import 'sub_layout';
+
+//sub scss
+// @import 'sub/header/header';
+// @import 'sub/footer/footer';
+// @import 'sub/department/department';
+// @import 'sub/gallery/gallery';
+// @import 'sub/youtube/youtube';
+// @import 'sub/community/community';
+// @import 'sub/location/location';
+// @import 'sub/signup/signup';

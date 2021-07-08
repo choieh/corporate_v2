@@ -1,0 +1,32 @@
+@mixin fontM($fw, $fz, $lh, $cl) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  color: $cl;
+  font-family: 'Montserrat';
+}
+
+@mixin fontN($fw, $fz, $lh, $cl) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  color: $cl;
+  font-family: 'Noto Sans KR';
+}
+
+@mixin inner() {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+@mixin clear() {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@mixin obfit() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

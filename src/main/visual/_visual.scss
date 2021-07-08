@@ -1,0 +1,18 @@
+#visual {
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-color: #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+/* tablet */
+@media screen and (max-width: $tablet) {
+  #visual {
+    height: calc(100vh - 100px);
+  }
+}
+
+/* mobile */
+@media screen and (max-width: $mobile) {
+}
