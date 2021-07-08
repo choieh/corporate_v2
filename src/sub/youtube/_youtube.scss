@@ -1,0 +1,79 @@
+.youtube {
+  .inner {
+    .videoList {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 50px;
+
+      h2 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      article {
+        position: relative;
+        width: 48%;
+        height: 300px;
+        margin-bottom: 40px;
+        cursor: pointer;
+
+        .pic {
+          display: block;
+          width: 100%;
+          height: 300px;
+
+          img {
+            @include obfit();
+          }
+        }
+
+        .txt {
+          > h3 {
+            @include fontM(700, 24px, 1, #000);
+          }
+        }
+      }
+    }
+  }
+}
+
+.videoPop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 5;
+
+  .inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > span {
+    @include fontM(600, 20px, 1, #fff);
+    font-style: italic;
+    position: absolute;
+    top: 4vw;
+    right: 4vw;
+    cursor: pointer;
+  }
+}
+/* tablet */
+@media screen and (max-width: $tablet) {
+}
+
+/* mobile */
+@media screen and (max-width: $mobile) {
+}
