@@ -19,12 +19,12 @@
 @import 'main/visual/visual';
 @import 'main/footer/footer';
 
-//sub common layout
-// @import 'sub_layout';
+// sub common layout
+@import 'sub_layout';
 
-//sub scss
-// @import 'sub/header/header';
-// @import 'sub/footer/footer';
+// sub scss
+@import 'sub/header/header';
+@import 'sub/footer/footer';
 // @import 'sub/department/department';
 // @import 'sub/gallery/gallery';
 // @import 'sub/youtube/youtube';
