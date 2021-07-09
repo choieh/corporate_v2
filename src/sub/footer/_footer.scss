@@ -1,43 +1,84 @@
 #footer_sub {
   width: 100%;
   padding: 50px 0;
-  background: #999;
+  background: #eee;
 
   .inner {
     @include inner();
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     h1 {
-      @include fontM(bold, 24px, 1, #333);
-      float: left;
+      @include fontM(bold, 24px, 1, #444);
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
     }
-    ul {
-      float: right;
 
-      li {
-        float: left;
-        margin-left: 20px;
+    .link {
+      width: 40%;
+      display: flex;
 
-        a {
-          @include fontN(bold, 14px, 1, #666);
+      ul {
+        width: 35%;
+
+        li {
+          @include fontM(600, 14px, 1, #444);
+          padding: 10px 0;
+
+          a {
+            @include fontM(400, 12px, 1, #666);
+          }
         }
       }
     }
 
-    address {
-      @include fontN(normal, 14px, 1.8, #555);
-      width: 100%;
-      float: left;
-      margin: 20px 0;
+    .contact {
+      width: 40%;
+      padding: 10px 0;
+
+      h6 {
+        @include fontM(600, 14px, 1, #444);
+        margin-bottom: 10px;
+      }
+      p,
+      address {
+        @include fontM(400, 12px, 1.8, #666);
+        letter-spacing: 0.5px;
+      }
+
+      .social {
+        margin-top: 30px;
+
+        .icon {
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            margin-right: 20px;
+
+            a {
+              color: #333;
+            }
+          }
+        }
+      }
     }
 
-    p {
-      @include fontN(normal, 12px, 1, #555);
+    .copy {
       width: 100%;
-      float: left;
-    }
+      margin-top: 20px;
+      padding-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      border-top: 1px solid #000;
 
-    &::after {
-      @include clear();
+      p {
+        @include fontM(400, 12px, 1.8, #666);
+        letter-spacing: 0.5px;
+        margin-right: 50px;
+      }
     }
   }
 }
@@ -45,27 +86,67 @@
 /* tablet */
 @media screen and (max-width: $tablet) {
   #footer_sub {
-    padding: 60px 30px;
-    box-sizing: border-box;
+    padding: 40px 30px;
 
     .inner {
       width: 100%;
+      h1 {
+        font-size: 22px;
+      }
+
+      .link {
+        width: 50%;
+
+        ul {
+          width: 50%;
+        }
+      }
+
+      .contact {
+        width: 45%;
+      }
+
+      .copy {
+        padding-top: 20px;
+
+        p {
+          margin-right: 0;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+      }
     }
   }
 }
 /* mobile */
 @media screen and (max-width: $mobile) {
   #footer_sub {
-    padding: 60px 20px;
+    padding: 40px 20px;
+
     .inner {
       h1 {
-        margin-bottom: 20px;
+        text-align: left;
       }
-      ul {
+      .link {
         width: 100%;
-        li {
-          margin-left: 0px;
-          margin-right: 10px;
+        margin-bottom: 30px;
+
+        ul {
+          width: 50%;
+        }
+      }
+
+      .contact {
+        width: 100%;
+      }
+
+      .copy {
+        padding-top: 20px;
+
+        p {
+          margin-right: 0;
+          margin-bottom: 10px;
+          width: 100%;
         }
       }
     }
