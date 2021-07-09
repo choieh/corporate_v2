@@ -16,4 +16,32 @@ $(document).ready(function () {
       $('body').css({ overflow: 'visible' });
     }
   });
+
+  $('#gnb >li').on('mouseenter', function () {
+    $(this).find('.sub').show();
+    $(this).children('a').addClass('on');
+  });
+
+  $('#gnb >li').on('mouseleave', function () {
+    $(this).find('.sub').hide();
+    $(this).children('a').removeClass('on');
+  });
+
+  $('#gnb > li').each(function (index) {
+    $('#gnb > li')
+      .eq(index)
+      .find('a')
+      .first()
+      .on('focusin', function () {
+        $('#gnb > li').eq(index).find('.sub').show();
+      });
+
+    $('#gnb > li')
+      .eq(index)
+      .find('a')
+      .last()
+      .on('focusout', function () {
+        $('#gnb > li').eq(index).find('.sub').hide();
+      });
+  });
 });

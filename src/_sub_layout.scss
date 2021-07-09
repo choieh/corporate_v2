@@ -14,11 +14,11 @@
     min-height: 500px;
 
     h1 {
-      @include fontN(normal, 50px, 1, #000);
+      @include fontM(normal, 50px, 1, #000);
       margin-bottom: 60px;
 
       span {
-        @include fontN(normal, 20px, 1, #aaa);
+        @include fontM(normal, 20px, 1, #aaa);
 
         &::before {
           content: '/';
