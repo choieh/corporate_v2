@@ -3,15 +3,15 @@
   font-size: $fz;
   line-height: $lh;
   color: $cl;
-  font-family: 'Montserrat';
+  font-family: 'Lato', sans-serif;
 }
 
-@mixin fontN($fw, $fz, $lh, $cl) {
+@mixin fontS($fw, $fz, $lh, $cl) {
   font-weight: $fw;
   font-size: $fz;
   line-height: $lh;
   color: $cl;
-  font-family: 'Noto Sans KR';
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
 @mixin inner() {
