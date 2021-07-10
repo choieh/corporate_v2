@@ -13,17 +13,38 @@
     @include inner();
     min-height: 500px;
 
-    h1 {
-      @include fontM(normal, 50px, 1, #000);
-      margin-bottom: 60px;
+    .title {
+      position: relative;
+      margin-bottom: 100px;
+      padding: 100px 0;
+      //border-bottom: 2px solid #222;
+      h1 {
+        @include fontTitle(400, 96px, 1, #222);
+        margin-bottom: 20px;
+      }
 
-      span {
-        @include fontM(normal, 20px, 1, #aaa);
+      .circle {
+        @include fontM(400, 14px, 100px, #fff);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #333;
+        text-align: center;
+        margin-left: 50px;
+      }
 
-        &::before {
-          content: '/';
-          margin-right: 20px;
-          margin-left: 10px;
+      .txt {
+        position: absolute;
+        right: 0;
+        bottom: 100px;
+        width: 40%;
+
+        p {
+          @include fontM(400, 14px, 1.4, #333);
+        }
+
+        &:last-child p {
+          margin-top: 15px;
         }
       }
     }
