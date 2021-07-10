@@ -1,6 +1,5 @@
 .content {
   width: 100%;
-  padding-bottom: 0 0 150px;
 
   .sub_visual {
     width: 100%;
@@ -38,13 +37,13 @@
         right: 0;
         bottom: 100px;
         width: 40%;
+        height: 100px;
 
         p {
           @include fontM(400, 14px, 1.4, #333);
-        }
-
-        &:last-child p {
-          margin-top: 15px;
+          &:last-child {
+            margin-top: 15px;
+          }
         }
       }
     }
@@ -54,15 +53,32 @@
 /* tablet */
 @media screen and (max-width: $tablet) {
   .content {
-    padding: 0px 0px 100px;
+    width: 100%;
 
-    .sub_visual {
-      height: 200px;
-    }
     .inner {
       width: 100%;
-      padding: 0 30px;
-      box-sizing: border-box;
+
+      .title {
+        margin-bottom: 70px;
+        padding: 50px 20px;
+
+        h1 {
+          font-size: 80px;
+        }
+
+        .txt {
+          right: 20px;
+          bottom: 50px;
+          width: 45%;
+
+          p {
+            font-size: 12px;
+            &:last-child {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -70,17 +86,22 @@
 /* mobile */
 @media screen and (max-width: $mobile) {
   .content {
-    padding: 0px 0px 80px;
-
-    .sub_visual {
-      height: 150px;
-    }
+    padding: 0 0 80px;
 
     .inner {
-      h1 {
-        span {
-          display: block;
-          margin-top: 10px;
+      .title {
+        h1 {
+          font-size: 56px;
+        }
+
+        .circle {
+          margin-left: 0;
+        }
+
+        .txt {
+          p {
+            font-size: 10px;
+          }
         }
       }
     }
