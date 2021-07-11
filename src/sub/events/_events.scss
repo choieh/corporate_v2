@@ -1,4 +1,4 @@
-.community {
+.events {
   .event {
     width: 80%;
     margin: 0 auto;
@@ -27,11 +27,16 @@
 
       tbody {
         tr {
-          border-top: 1px solid #222;
+          border-top: 2px solid #222;
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
           cursor: pointer;
+          transition: 0.5s;
+
+          &:hover {
+            background-color: #eee;
+          }
 
           td {
             padding: 30px 0 60px;
@@ -76,7 +81,7 @@
 
 /* tablet */
 @media screen and (max-width: $tablet) {
-  .community {
+  .events {
     .event {
       .info {
         h3 {
@@ -125,7 +130,7 @@
 
 /* mobile */
 @media screen and (max-width: $mobile) {
-  .community {
+  .events {
     .event {
       .info {
         h3 {
