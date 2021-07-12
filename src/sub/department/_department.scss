@@ -1,9 +1,154 @@
 .department {
-  .sub_visual {
-    background-color: #666;
+  .brand,
+  .people {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      @include fontM(700, 20px, 1, #333);
+      width: 20%;
+    }
+
+    .list {
+      width: 70%;
+    }
+  }
+
+  .brand {
+    margin-bottom: 50px;
+
+    > .list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      cursor: pointer;
+
+      li {
+        position: relative;
+        width: 30%;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+
+        h3,
+        p,
+        span {
+          position: relative;
+          z-index: 2;
+        }
+
+        h3 {
+          @include fontM(700, 18px, 1, #333);
+          margin-bottom: 20px;
+        }
+
+        p {
+          @include fontM(300, 16px, 1.6, #555);
+          margin-bottom: 30px;
+        }
+
+        span {
+          @include fontM(300, 18px, 18px, #222);
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-color: #fff;
+          border-radius: 50%;
+          text-align: center;
+          opacity: 0;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: #222;
+        }
+
+        &:hover {
+          &::after {
+            animation: line_fill 0.6s linear forwards;
+          }
+
+          h3 {
+            color: #fff;
+          }
+
+          p {
+            color: #ddd;
+          }
+
+          span {
+            opacity: 1;
+            transition: opacity 0.35s;
+            transition-delay: 0.6s;
+          }
+        }
+      }
+    }
+  }
+
+  .people {
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        position: relative;
+        width: 100%;
+        display: block;
+
+        .txt {
+          width: 150px;
+          position: absolute;
+          bottom: 0;
+          left: 220px;
+
+          .name {
+            margin-top: 20px;
+          }
+        }
+
+        &:nth-of-type(2n) {
+          margin-left: 70%;
+
+          .txt {
+            left: auto;
+            right: 260px;
+          }
+        }
+
+        .pic {
+          width: 200px;
+          height: 250px;
+          border: 1px solid #000;
+        }
+
+        span {
+          @include fontM(400, 16px, 1, #444);
+        }
+
+        .name {
+          @include fontM(300, 14px, 1, #555);
+        }
+      }
+    }
   }
 }
 
+@keyframes line_fill {
+  0% {
+    height: 1px;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
 /* tablet */
 @media screen and (max-width: $tablet) {
 }
