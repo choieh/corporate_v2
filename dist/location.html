@@ -117,11 +117,11 @@
             </div>
           </li>
           <li>
-            <a href="location.html">LOCATION</a>
+            <a href="location.html">CONTACT</a>
             <div class="sub">
-              <h2>LOCATION</h2>
+              <h2>CONTACT</h2>
               <div class="sub1">
-                <h2><a href="#">CONTACT US</a></h2>
+                <h2><a href="#">LOCATION</a></h2>
                 <ul>
                   <li><a href="#">2depth</a></li>
                   <li><a href="#">2depth</a></li>
@@ -163,7 +163,7 @@
           <li><a href="gallery.html">GALLERY</a></li>
           <li><a href="youtube.html">YOUTUBE</a></li>
           <li><a href="events.html">EVENTS</a></li>
-          <li><a href="location.html">LOCATION</a></li>
+          <li><a href="location.html">CONTACT</a></li>
           <li><a href="signup.html">SIGN UP</a></li>
         </ul>
       </nav>
@@ -171,14 +171,53 @@
   </header>
 
 
-<section class="content location">
-  <div class="sub_visual"></div>
+<section class="content contact">
   <div class="inner">
-    <h1>Location<span>오시는 길</span></h1>
-    <!-- 컨텐츠 -->
+    <div class="title">
+      <h1>CONTACT</h1>
+      <div class="circle">
+        Location
+      </div>
+      <div class="txt">
+        <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+          nostrum? Eos, omnis perspiciatis. Asperiores adipisci magni enim autem voluptatum qui cumque.</P>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+      </div>
+    </div>
+    <div class="location">
+      <ul class="branch">
+        <li data-index="0" class="on">
+          <a href="#">PLACE 1</a>
+          <p>Studio Lorem</p>
+          <p>17 Apgujeong-ro 60-gil, Gangnam-gu, Seoul</p>
+          <p>Tel: 02-1234-5693</p>
+        </li>
+        <li data-index="1">
+          <a href="#">PLACE 2</a>
+          <p>Studio Ipsum</p>
+          <p>300, Olympic-ro, Songpa-gu, Seoul</p>
+          <p>Tel: 02-2547-1000</p>
+        </li>
+        <li data-index="2">
+          <a href="#">PLACE 3</a>
+          <p>Studio Dolor</p>
+          <p>12, Teheran-ro 98-gil, Gangnam-gu, Seoul</p>
+          <p>Tel: 02-512-5046</p>
+        </li>
+      </ul>
+
+      <div id="map"></div>
+
+      <ul class="traffic">
+        <li><a href="#">Traffic ON</a></li>
+        <li class="on"><a href="#">Traffic OFF</a></li>
+      </ul>
+
+    </div>
   </div>
 </section>
 
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8195929053865d8e4bcc444a9c28fc92"></script>
 <script defer src="js/sub/location/location.js"></script>
 
 <footer id="footer_sub">
