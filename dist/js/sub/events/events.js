@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const url = 'data/board.json';
-  const frame = $('.community .event table');
+  const frame = $('.events .event table');
   const resultData = callData(url);
 
   createTable(frame, resultData);
