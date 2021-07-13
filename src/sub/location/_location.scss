@@ -1,78 +1,75 @@
 .contact {
   .location {
-    .branch {
+    margin-bottom: 150px;
+
+    > h2 {
+      @include fontM(400, 26px, 1, #333);
+      border-bottom: 1px solid #222;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+    }
+    #map {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-bottom: 200px;
+      height: 500px;
+      position: relative;
+      z-index: 1;
 
-      li {
-        position: relative;
+      .branch {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+        z-index: 2;
         width: 30%;
-        cursor: pointer;
-        padding: 15px;
-        border: 1px solid #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 120px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 1px;
-          height: 0;
-          margin-top: 10px;
-          background-color: #222;
-        }
-
-        a {
-          @include fontM(400, 20px, 1, #222);
-          margin-bottom: 10px;
-          display: block;
-        }
-
-        p {
-          @include fontM(300, 14px, 1, #555);
-          margin-bottom: 7px;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-
-        &.on {
-          background-color: #333;
-
-          &::after {
-            animation: line_vertical 0.7s linear forwards;
-          }
+        li {
+          position: relative;
+          width: 100%;
+          padding: 15px;
+          cursor: pointer;
+          margin: 10px 0;
+          background-color: #fff;
 
           a {
-            color: #fff;
+            @include fontM(400, 20px, 1, #222);
+            margin-bottom: 10px;
+            display: block;
           }
+
           p {
-            color: #ddd;
+            @include fontM(300, 14px, 1, #555);
+            margin-bottom: 7px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          &.on {
+            background-color: #333;
+            a {
+              color: #fff;
+            }
+            p {
+              color: #ddd;
+            }
           }
         }
       }
     }
 
-    #map {
-      width: 100%;
-      height: 500px;
-    }
-
     .traffic {
-      margin-top: 20px;
       display: flex;
+      margin: 20px 0 50px;
       li {
-        margin-right: 20px;
+        margin-right: 40px;
         border: 1px solid #333;
         a {
           @include fontM(300, 16px, 40px, #222);
-          padding: 10px;
+          padding: 10px 20px;
         }
 
         &.on {
@@ -80,6 +77,117 @@
           a {
             color: #fff;
           }
+        }
+      }
+    }
+
+    .howTo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .way {
+        width: 30%;
+        padding: 20px;
+
+        .wayTitle {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #000;
+          padding: 20px 10px;
+
+          h2 {
+            @include fontM(400, 20px, auto, #333);
+          }
+
+          span {
+            font-size: 25px;
+            color: #666;
+          }
+        }
+
+        p {
+          padding: 0 10px;
+          @include fontS(300, 16px, 1.8, #444);
+
+          strong {
+            @include fontM(700, 16px, 1.8, #444);
+            display: block;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .contact_box {
+    width: 100%;
+    min-height: 300px;
+
+    > h2 {
+      @include fontM(400, 26px, 1, #333);
+      border-bottom: 1px solid #222;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+    }
+
+    #contact-form {
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+
+      section {
+        width: 50%;
+        > article {
+          width: 100%;
+        }
+      }
+
+      article {
+        width: 50%;
+        margin-bottom: 20px;
+
+        label {
+          @include fontM(400, 18px, 1, #333);
+          margin-right: 10px;
+        }
+
+        input,
+        textarea {
+          width: 90%;
+          padding: 10px;
+          margin-top: 20px;
+          outline: 0;
+          border: none;
+          border-bottom: 1px solid #222;
+
+          &:focus {
+            border-width: 2px;
+          }
+        }
+
+        textarea {
+          width: 100%;
+          height: 230px;
+          resize: none;
+          margin-top: 20px;
+          border-top: 1px solid #222;
+        }
+      }
+
+      input[type='submit'] {
+        margin: 40px auto 0;
+        padding: 20px 50px;
+        background-color: transparent;
+        outline: 0;
+        cursor: pointer;
+        border: 1px solid #222;
+        transition: 0.35s;
+        &:hover {
+          background-color: #222;
+          color: #fff;
         }
       }
     }
@@ -98,34 +206,69 @@
 /* tablet */
 @media screen and (max-width: $tablet) {
   .contact {
-    .location {
+    .location,
+    .contact_box {
       padding: 0 30px;
-      .branch {
-        li {
-          padding: 10px;
+    }
+    .location {
+      margin-bottom: 100px;
+      > h2 {
+        font-size: 24px;
+      }
+      #map {
+        height: 550px;
 
-          &::after {
-            top: 120px;
-          }
+        .branch {
+          top: 0;
+          left: 0;
+          transform: translateY(0);
+          width: 100%;
+          flex-direction: row;
 
-          a {
-            font-size: 18px;
-          }
+          li {
+            width: 100%;
+            padding: 10px;
+            margin: 0;
 
-          p {
-            margin-bottom: 5px;
-            font-size: 12px;
-            line-height: 1.4;
+            a {
+              font-size: 18px;
+            }
+
+            p {
+              margin-bottom: 5px;
+              font-size: 12px;
+              line-height: 1.4;
+            }
           }
         }
       }
 
       .traffic {
+        margin: 20px 0;
         li {
           a {
             font-size: 14px;
           }
         }
+      }
+
+      .howTo {
+        .way {
+          width: 100%;
+          padding: 20px;
+        }
+      }
+    }
+
+    .contact_box {
+      width: 100%;
+
+      > h2 {
+        font-size: 24px;
+      }
+
+      #contact-form {
+        padding: 20px;
       }
     }
   }
@@ -134,6 +277,78 @@
 /* mobile */
 @media screen and (max-width: $mobile) {
   .contact {
+    .location,
+    .contact_box {
+      padding: 0 20px;
+    }
+    .location {
+      > h2 {
+        font-size: 22px;
+      }
+      #map {
+        .branch {
+          li {
+            height: 100%;
+
+            &.on {
+              p {
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                  display: block;
+                }
+              }
+            }
+
+            a {
+              font-size: 16px;
+            }
+
+            p {
+              &:nth-of-type(2),
+              &:nth-of-type(3) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .traffic {
+        li {
+          margin-right: 30px;
+        }
+      }
+    }
+
+    .contact_box {
+      > h2 {
+        font-size: 22px;
+      }
+
+      #contact-form {
+        padding: 10px;
+
+        section,
+        article {
+          width: 100%;
+
+          input,
+          textarea {
+            width: 100%;
+            margin-top: 10px;
+          }
+        }
+
+        article {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+/* 
+ .contact {
     .location {
       padding: 0 30px;
       .branch {
@@ -163,4 +378,4 @@
       }
     }
   }
-}
+*/

@@ -14,39 +14,122 @@
       </div>
     </div>
     <div class="location">
-      <ul class="branch">
-        <li data-index="0" class="on">
-          <a href="#">PLACE 1</a>
-          <p>Studio Lorem</p>
-          <p>17 Apgujeong-ro 60-gil, Gangnam-gu, Seoul</p>
-          <p>Tel: 02-1234-5693</p>
-        </li>
-        <li data-index="1">
-          <a href="#">PLACE 2</a>
-          <p>Studio Ipsum</p>
-          <p>300, Olympic-ro, Songpa-gu, Seoul</p>
-          <p>Tel: 02-2547-1000</p>
-        </li>
-        <li data-index="2">
-          <a href="#">PLACE 3</a>
-          <p>Studio Dolor</p>
-          <p>12, Teheran-ro 98-gil, Gangnam-gu, Seoul</p>
-          <p>Tel: 02-512-5046</p>
-        </li>
-      </ul>
-
-      <div id="map"></div>
+      <h2>Map</h2>
+      <div id="map">
+        <ul class="branch">
+          <li data-index="0" class="on">
+            <a href="#">PLACE 1</a>
+            <p>Studio Lorem</p>
+            <p>17 Apgujeong-ro 60-gil, Gangnam-gu, Seoul</p>
+            <p>Tel: 02-1234-5693</p>
+          </li>
+          <li data-index="1">
+            <a href="#">PLACE 2</a>
+            <p>Studio Ipsum</p>
+            <p>300, Olympic-ro, Songpa-gu, Seoul</p>
+            <p>Tel: 02-2547-1000</p>
+          </li>
+          <li data-index="2">
+            <a href="#">PLACE 3</a>
+            <p>Studio Dolor</p>
+            <p>12, Teheran-ro 98-gil, Gangnam-gu, Seoul</p>
+            <p>Tel: 02-512-5046</p>
+          </li>
+        </ul>
+      </div>
 
       <ul class="traffic">
         <li><a href="#">Traffic ON</a></li>
         <li class="on"><a href="#">Traffic OFF</a></li>
       </ul>
 
+      <div class="howTo">
+        <div class="way">
+          <div class="wayTitle">
+            <h2>Bus</h2>
+            <span>
+              <i class="far fa-compass"></i>
+            </span>
+
+          </div>
+          <p>
+            <strong>PLACE 1</strong>
+            254번 버스 : 압구정 로데오 하차<br>
+            <strong>PLACE 2</strong>
+            2056번 버스 : 롯데월드타워 하차<br>
+            <strong>PLACE 3</strong>
+            301번 버스 : 코엑스 하차<br>
+          </p>
+        </div>
+        <div class="way">
+          <div class="wayTitle">
+            <h2>Metro</h2>
+            <span>
+              <i class="far fa-compass"></i>
+            </span>
+          </div>
+          <p>
+            <strong>PLACE 1</strong>
+            수인분당선 압구정 로데오역 하차<br>
+            <strong>PLACE 2</strong>
+            2호선, 8호선 잠실역 하차<br>
+            <strong>PLACE 3</strong>
+            2호선 삼성역 하차<br>
+          </p>
+        </div>
+        <div class="way">
+          <div class="wayTitle">
+            <h2>Car</h2>
+            <span>
+              <i class="far fa-compass"></i>
+            </span>
+          </div>
+          <p>
+            <strong>PLACE 1</strong>
+            압구정로 한양아파트 앞 사거리<br>
+            <strong>PLACE 2</strong>
+            올림픽로 잠실역 사거리<br>
+            <strong>PLACE 3</strong>
+            테헤란로 삼성역 교차로<br>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="contact_box">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="hidden" name="contact_number">
+
+        <section>
+          <article>
+            <label for="name">Name</label>
+            <input type="text" required placeholder="이름을 입력하세요" id="name" name="to_name">
+          </article>
+          <article>
+            <label for="num">Contact Number</label>
+            <input type="text" required placeholder="연락처를 입력하세요" id="num" name="contact">
+          </article>
+          <article>
+            <label for="email">E-Mail</label>
+            <input type="email" required placeholder="이메일을 입력하세요" id="email" name="from_name">
+          </article>
+        </section>
+        <article>
+          <label for="message">Contact Message</label>
+          <textarea required placeholder="문의내용을 입력하세요*" id="message" name="message_html"></textarea>
+        </article>
+        <input type="submit" value="SEND">
+      </form>
     </div>
   </div>
 </section>
 
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8195929053865d8e4bcc444a9c28fc92"></script>
 <script defer src="js/sub/location/location.js"></script>
+<script defer src="js/sub/location/contact.js"></script>
 
 <include src="../footer/footer.html"></include>
