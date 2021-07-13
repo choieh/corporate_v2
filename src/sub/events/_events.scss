@@ -75,6 +75,36 @@
         }
       }
     }
+
+    .pagination {
+      display: flex;
+      margin-top: 50px;
+
+      li {
+        margin-right: 15px;
+
+        &.on {
+          a {
+            font-weight: 700;
+            color: #333;
+            border-bottom: 1px solid #222;
+          }
+        }
+
+        &:hover {
+          a {
+            border-bottom: 1px solid #222;
+          }
+        }
+        a {
+          @include fontM(300, 20px, 1, #999);
+          width: 30px;
+          padding: 5px 0;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 

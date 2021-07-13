@@ -531,11 +531,6 @@ body {
 .content {
   width: 100%;
   padding: 0 0 150px; }
-  .content .sub_visual {
-    width: 100%;
-    height: 300px;
-    background: #bbb;
-    margin-bottom: 50px; }
   .content .inner {
     width: 1180px;
     margin: 0 auto;
@@ -1669,6 +1664,27 @@ body {
             margin-bottom: 10px; }
           .events .event table tbody tr td:nth-of-type(3) .pay {
             color: #777; }
+  .events .event .pagination {
+    display: flex;
+    margin-top: 50px; }
+    .events .event .pagination li {
+      margin-right: 15px; }
+      .events .event .pagination li.on a {
+        font-weight: 700;
+        color: #333;
+        border-bottom: 1px solid #222; }
+      .events .event .pagination li:hover a {
+        border-bottom: 1px solid #222; }
+      .events .event .pagination li a {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 1;
+        color: #999;
+        font-family: 'Lato', sans-serif;
+        width: 30px;
+        padding: 5px 0;
+        display: block;
+        text-align: center; }
 
 /* tablet */
 @media screen and (max-width: 1179px) {
