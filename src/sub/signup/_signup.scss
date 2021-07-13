@@ -1,0 +1,202 @@
+.signup {
+  background-color: rgba(211, 217, 199, 0.3);
+  .sub_visual {
+    width: 100%;
+    height: 350px;
+    background: url(../img/sub_visual.jpg) no-repeat top/cover;
+    position: relative;
+
+    h1 {
+      @include fontM(400, 70px, 350px, #333);
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1px;
+      // height: 1000px;
+      height: 140px;
+      background-color: #222;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+    }
+  }
+
+  .inner {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+
+    form,
+    .help_txt {
+      width: 50%;
+      padding: 0 20px;
+    }
+
+    form {
+      width: 55vw;
+      margin: 0 auto;
+      article {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 25px;
+        align-items: baseline;
+
+        label,
+        h4 {
+          @include fontM(400, 18px, 1, #333);
+          display: block;
+          width: 35%;
+          margin-right: 10px;
+        }
+
+        .input_field {
+          width: 65%;
+
+          input[type='text'],
+          input[type='password'],
+          select {
+            width: 200px;
+            padding: 10px;
+          }
+        }
+
+        textarea {
+          width: 100%;
+          resize: none;
+          padding: 10px;
+          height: 130px;
+        }
+
+        p {
+          @include fontM(500, 14px, 1, #fd5959);
+          margin-top: 10px;
+          margin-left: 5px;
+          display: none;
+        }
+
+        span {
+          @include fontM(500, 14px, 1, #bbb);
+          display: block;
+          margin-left: 2%;
+          margin: 10px 2%;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            margin-right: 2%;
+            border-radius: 50%;
+          }
+
+          &.error {
+            color: #fd5959;
+            &::before {
+              background-color: #fd5959;
+            }
+          }
+
+          &.true {
+            color: #15ea44;
+            &::before {
+              background-color: #15ea44;
+            }
+          }
+        }
+
+        &.terms {
+          display: block;
+          margin-bottom: 50px;
+          label {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+
+          .input_field {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 10px;
+
+            > label {
+              @include fontM(500, 14px, 1, #222);
+              width: auto;
+              margin-left: 10px;
+              margin-bottom: 0;
+            }
+
+            > p {
+              margin-left: 5px;
+              margin-top: 0;
+            }
+          }
+        }
+
+        &.gender {
+          > .input_field {
+            display: flex;
+            flex-wrap: wrap;
+
+            > label {
+              font-weight: normal;
+
+              > input {
+                margin-right: 5px;
+              }
+            }
+
+            p {
+              width: 100%;
+            }
+          }
+        }
+
+        &.message {
+          align-items: center;
+        }
+      }
+    }
+
+    .help_txt {
+      h2 {
+        @include fontM(400, 18px, 1, #333);
+      }
+    }
+
+    .input_btn {
+      width: 100%;
+      text-align: center;
+      padding-top: 50px;
+
+      input {
+        @include fontM(400, 16px, 1, #333);
+        width: 130px;
+        height: 50px;
+        margin: 0 10px;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid #444;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: #444;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* tablet */
+@media screen and (max-width: $tablet) {
+}
+
+/* mobile */
+@media screen and (max-width: $mobile) {
+}

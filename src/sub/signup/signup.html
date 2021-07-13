@@ -1,9 +1,11 @@
 <include src="../header/header.html" title="Sign Up"></include>
 
 <section class="content signup">
-  <div class="sub_visual"></div>
+  <div class="sub_visual">
+    <h1>Sign Up</h1>
+  </div>
   <div class="inner">
-    <h1>Sign Up<span>회원가입</span></h1>
+
     <!-- 컨텐츠 -->
     <form action="result.html" method="GET">
       <fieldset>
@@ -69,19 +71,6 @@
             <p>성별을 선택해주세요</p>
           </div>
         </article>
-        <article class="job">
-          <label for="job">JOB</label>
-          <div class="input_field">
-            <select name="job" id="job">
-              <option value="">직업을 선택해주세요</option>
-              <option value="publisher">Publisher</option>
-              <option value="designer">Designer</option>
-              <option value="front_end">Front End</option>
-              <option value="back_end">Back End</option>
-            </select>
-            <p>직업을 선택해주세요</p>
-          </div>
-        </article>
         <article class="message">
           <label for="message">YOUR MESSAGE</label>
           <div class="input_field">
@@ -89,17 +78,34 @@
             <p>메세지를 입력해주세요(10글자 이상)</p>
           </div>
         </article>
-        <div class="input_btn">
-          <input type="reset" value="CANCEL">
-          <input type="submit" value="CONFIRM">
-        </div>
       </fieldset>
     </form>
+
+    <!-- <div class="help_txt">
+      <h2>Let's Join Us</h2>
+      <p class="terms">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+      <p class="userid">Amet placeat eaque eius! Sequi repudiandae delectus, distinctio rerum suscipit odio deserunt.
+      </p>
+      <p class="pwd1 pwd2">Commodi veniam vero, quidem iusto ab rerum, </p>
+      <p class="email"> quisquam esse, reiciendis voluptate dolorum quod ducimus tenetur? Mollitia dicta accusantium,
+      </p>
+      <p class="gender">tenetur aperiam nisi eius,</p>
+      <p class="message"> odit nostrum ab optio numquam eos. Quam, ad!</p>
+    </div> -->
+
+    <div class="input_btn">
+      <input type="reset" value="CANCEL">
+      <input type="submit" value="CONFIRM">
+    </div>
+
   </div>
 </section>
 
 
 
 <script defer src="js/sub/signup/signup.js"></script>
+<script defer src="js/sub/signup/text.js"></script>
 
 <include src="../footer/footer.html"></include>
