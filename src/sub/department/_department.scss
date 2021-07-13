@@ -6,9 +6,19 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    h2 {
-      @include fontM(700, 20px, 1, #333);
+    .subTitle {
       width: 20%;
+      margin-top: -45px;
+      h2 {
+        @include fontM(700, 24px, 1, #333);
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+      p {
+        @include fontM(300, 16px, 1.4, #333);
+        letter-spacing: 1px;
+      }
     }
 
     .list {
@@ -72,7 +82,7 @@
 
         &:hover {
           &::after {
-            animation: line_fill 0.6s linear forwards;
+            animation: line_fill 0.5s linear forwards;
           }
 
           h3 {
@@ -86,7 +96,7 @@
           span {
             opacity: 1;
             transition: opacity 0.35s;
-            transition-delay: 0.6s;
+            transition-delay: 0.5s;
           }
         }
       }
