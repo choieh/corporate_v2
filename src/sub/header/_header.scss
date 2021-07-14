@@ -53,7 +53,7 @@
             }
           }
 
-          &:nth-of-type(2) .sub {
+          &:nth-of-type(1) .sub {
             .sub2 {
               h2 {
                 a {
@@ -67,6 +67,166 @@
                 margin-top: 0;
                 height: auto;
                 border-top: none;
+              }
+            }
+          }
+
+          &:nth-of-type(2) .sub {
+            .sub2 {
+              img {
+                @include obfit();
+              }
+            }
+
+            .pic {
+              width: 25%;
+              height: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-content: space-between;
+              flex-wrap: wrap;
+              padding: 0 2%;
+
+              img {
+                width: 45%;
+                height: 45%;
+              }
+            }
+          }
+
+          &:nth-of-type(3) .sub {
+            .pic {
+              float: left;
+              margin-left: 30px;
+            }
+
+            .sub1 {
+              margin-left: 50px;
+            }
+            .sub2 {
+              float: right;
+              margin-left: 0;
+              h2 {
+                border-bottom: none;
+              }
+
+              .button {
+                width: 100%;
+                height: calc(100% - 45px);
+                border-top: 1px solid #222;
+                border-bottom: 1px solid #222;
+                padding: 30px 15px;
+
+                > p {
+                  @include fontM(300, 18px, 1.4, #444);
+                  margin-bottom: 30px;
+                }
+
+                button {
+                  @include fontM(400, 18px, 1, #444);
+                  width: 100%;
+                  height: 40px;
+                  cursor: pointer;
+                  border: 1px solid #222;
+                  border-radius: 0;
+                  background-color: transparent;
+                  transition: 0.35s;
+
+                  &:hover {
+                    background-color: #444;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+
+          &:nth-of-type(4) .sub {
+            .sub2 {
+              margin-left: 50px;
+              .preview {
+                width: 100%;
+                height: 45%;
+                margin-bottom: 10%;
+                background-color: #eee;
+                padding: 20px;
+                cursor: pointer;
+                transition: 0.35s;
+
+                &:hover {
+                  background-color: #555;
+                  h5 {
+                    color: #fff;
+                  }
+                  span,
+                  p {
+                    color: #eee;
+                  }
+                }
+
+                h5 {
+                  @include fontM(400, 18px, 1, #444);
+                  margin-bottom: 10px;
+                }
+
+                span {
+                  @include fontM(400, 14px, 1, #666);
+                  margin-bottom: 12px;
+                  display: block;
+                }
+
+                p {
+                  @include fontM(300, 14px, 1.4, #666);
+                  letter-spacing: 1px;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+
+          &:nth-of-type(5) .sub {
+            .pic {
+              float: left;
+              margin-left: 50px;
+            }
+            .sub2 {
+              float: right;
+
+              .snsIcon {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                padding: 30px 0;
+
+                li a {
+                  font-size: 20px;
+                  color: #777;
+                  transition: 0.35s;
+
+                  &:hover {
+                    color: #333;
+                    transform: scale(1.1);
+                  }
+                }
+              }
+
+              button {
+                @include fontM(400, 18px, 1, #444);
+                width: 100%;
+                height: 40px;
+                cursor: pointer;
+                border: 1px solid #222;
+                border-radius: 0;
+                background-color: transparent;
+                transition: 0.35s;
+
+                &:hover {
+                  background-color: #444;
+                  color: #fff;
+                }
               }
             }
           }
