@@ -20,16 +20,10 @@
           margin: 15px 0;
           background-color: #333;
         }
-
-        /*  &.line {
-          &::after {
-            animation: line 0.7s linear forwards;
-          }
-        } */
       }
     }
 
-    .left {
+    .left_sec {
       width: 30%;
       height: fit-content;
       position: sticky;
@@ -82,17 +76,33 @@
             &::after {
               opacity: 1;
             }
+
+            .hoverLine {
+              opacity: 1;
+              .top,
+              .bottom {
+                animation: hoverLine_w 0.6s linear forwards;
+              }
+
+              .left,
+              .right {
+                animation: hoverLine_h 0.6s linear forwards;
+              }
+            }
           }
         }
 
         .pic {
+          position: relative;
           display: block;
           width: 100%;
           height: 200px;
           margin-bottom: 20px;
 
           &::after {
-            content: '';
+            content: 'VIEW';
+            @include fontM(400, 20px, 200px, #eee);
+            text-align: center;
             display: block;
             width: 100%;
             height: 100%;
@@ -105,6 +115,50 @@
 
           img {
             @include obfit();
+          }
+
+          .hoverLine {
+            position: absolute;
+            width: calc(100% - 40px);
+            height: 160px;
+            top: 20px;
+            left: 20px;
+            padding: 20px;
+            opacity: 0;
+            z-index: 2;
+
+            div {
+              position: absolute;
+              background-color: #fff;
+              cursor: pointer;
+
+              &.top {
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 1px;
+              }
+
+              &.left {
+                top: 0;
+                left: 0;
+                width: 1px;
+                height: 0%;
+              }
+              &.bottom {
+                bottom: 0;
+                right: 0;
+                width: 0%;
+                height: 1px;
+              }
+
+              &.right {
+                bottom: 0;
+                right: 0;
+                width: 1px;
+                height: 0%;
+              }
+            }
           }
         }
 
@@ -178,16 +232,6 @@
   }
 }
 
-@keyframes line {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 100%;
-  }
-}
-
 /* tablet */
 @media screen and (max-width: $tablet) {
   .youtube {
@@ -198,7 +242,7 @@
         }
       }
 
-      .left {
+      .left_sec {
         padding-left: 30px;
         width: 35%;
 
@@ -242,7 +286,7 @@
 @media screen and (max-width: $mobile) {
   .youtube {
     .inner {
-      .left {
+      .left_sec {
         position: relative;
         margin-bottom: 40px;
         padding: 0 20px;

@@ -36,6 +36,12 @@ $(document).ready(function () {
             <span>${num + ' / '}</span>
             <div class="pic" data-src=${imgSrcBig}>
               <img src="${imgSrc}" alt="이미지주소">
+              <div class='hoverLine'>
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+              </div>
             </div>
             <h2>${tit}</h2>
           </div>

@@ -30,6 +30,18 @@
             &::after {
               opacity: 1;
             }
+            .hoverLine {
+              opacity: 1;
+              .top,
+              .bottom {
+                animation: hoverLine_w 0.6s linear forwards;
+              }
+
+              .left,
+              .right {
+                animation: hoverLine_h 0.6s linear forwards;
+              }
+            }
           }
         }
 
@@ -40,12 +52,15 @@
         }
 
         .pic {
+          position: relative;
           width: 100%;
           height: 350px;
           margin-bottom: 15px;
 
           &::after {
-            content: '';
+            content: 'VIEW';
+            @include fontM(400, 20px, 350px, #eee);
+            text-align: center;
             display: block;
             width: 100%;
             height: 100%;
@@ -54,6 +69,50 @@
             margin-top: -350px;
             opacity: 0;
             transition: 0.5s;
+          }
+
+          .hoverLine {
+            position: absolute;
+            width: calc(100% - 40px);
+            height: 310px;
+            top: 20px;
+            left: 20px;
+            padding: 20px;
+            opacity: 0;
+            z-index: 2;
+
+            div {
+              position: absolute;
+              background-color: #fff;
+              cursor: pointer;
+
+              &.top {
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 1px;
+              }
+
+              &.left {
+                top: 0;
+                left: 0;
+                width: 1px;
+                height: 0%;
+              }
+              &.bottom {
+                bottom: 0;
+                right: 0;
+                width: 0%;
+                height: 1px;
+              }
+
+              &.right {
+                bottom: 0;
+                right: 0;
+                width: 1px;
+                height: 0%;
+              }
+            }
           }
 
           img {
@@ -106,6 +165,26 @@
       background-color: #fff;
       margin: 5px 0;
     }
+  }
+}
+
+@keyframes hoverLine_w {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hoverLine_h {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
   }
 }
 

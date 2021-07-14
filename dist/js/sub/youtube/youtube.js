@@ -66,6 +66,12 @@ $(document).ready(function () {
           <article>
           <a href="${data.snippet.resourceId.videoId}" class="pic">
             <img src="${data.snippet.thumbnails.high.url}">
+            <div class='hoverLine'>
+              <div class="top"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="bottom"></div>
+            </div>
           </a>
           <div class="txt">
             <h3>${title}</h3>
