@@ -16,8 +16,7 @@
       content: '';
       display: block;
       width: 1px;
-      // height: 1000px;
-      height: 140px;
+      height: 1000px;
       background-color: #222;
       position: absolute;
       left: 50%;
@@ -37,7 +36,6 @@
     }
 
     form {
-      width: 55vw;
       margin: 0 auto;
       article {
         width: 100%;
@@ -166,6 +164,28 @@
     .help_txt {
       h2 {
         @include fontM(400, 18px, 1, #333);
+      }
+
+      p {
+        opacity: 0;
+        transition: 0.35s;
+        margin: 20px 30px;
+
+        &:nth-of-type(1) {
+          height: 190px;
+        }
+
+        &:nth-of-type(3) {
+          height: 150px;
+        }
+
+        &:nth-of-type(5) {
+          height: 90px;
+        }
+
+        &.on {
+          opacity: 1;
+        }
       }
     }
 
