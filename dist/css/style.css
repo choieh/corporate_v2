@@ -463,7 +463,7 @@ body {
       background: #fff;
       padding: 26px 30px;
       transition: 0.5s;
-      z-index: 2; }
+      z-index: 3; }
       #header .inner .menuMo #gnbMo {
         position: absolute;
         top: 50%;
@@ -1157,7 +1157,7 @@ body {
       background: #fff;
       padding: 26px 30px;
       transition: 0.5s;
-      z-index: 2; }
+      z-index: 3; }
       #header_sub .inner .menuMo #gnbMo {
         position: absolute;
         top: 50%;
