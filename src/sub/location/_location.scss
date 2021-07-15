@@ -13,6 +13,12 @@
       height: 500px;
       position: relative;
       z-index: 1;
+      filter: grayscale(1);
+      transition: filter 0.35s;
+
+      &:hover {
+        filter: grayscale(0);
+      }
 
       .branch {
         position: absolute;
