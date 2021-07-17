@@ -106,6 +106,10 @@
 
           h2 {
             @include fontM(400, 20px, auto, #333);
+            > svg {
+              width: 20px;
+              margin-left: 5px;
+            }
           }
 
           span {
