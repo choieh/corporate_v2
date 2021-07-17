@@ -77,7 +77,7 @@ $(document).ready(function () {
             <h3>${title}</h3>
             <p class='desc'>${desc}</p>
             <p class='date'>${date}</p>
-            <a href="#">+</a>
+            <span></span>
           </div>
         </article>
         `;
