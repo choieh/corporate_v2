@@ -1,12 +1,12 @@
 #card {
-  padding: 0 0 120px;
+  padding: 50px 0 120px;
   .inner {
     @include inner();
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 30px 0;
     border-bottom: 1px solid #222;
+    padding-bottom: 30px;
 
     h2 {
       @include fontM(400, 50px, 1.2, #444);
