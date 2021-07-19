@@ -82,8 +82,80 @@
 
 /* tablet */
 @media screen and (max-width: $tablet) {
+  #card {
+    padding: 50px 30px 120px;
+
+    .inner {
+      width: 100%;
+      flex-direction: column;
+      padding-bottom: 50px;
+
+      article {
+        min-height: 250px;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #222;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        a {
+          height: 200px;
+
+          .txt {
+            width: 50%;
+            height: 100%;
+
+            span {
+              top: auto;
+              bottom: 0;
+            }
+          }
+
+          .pic {
+            bottom: auto;
+            top: 0;
+            left: auto;
+            right: 0;
+            width: 40%;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* mobile */
 @media screen and (max-width: $mobile) {
+  #card {
+    padding: 50px 20px 120px;
+
+    .inner {
+      h2 {
+        font-size: 40px;
+      }
+
+      article {
+        min-height: 200px;
+        a {
+          .txt {
+            width: 35%;
+
+            h3 {
+              font-size: 16px;
+            }
+          }
+
+          .pic {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60%;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
 }
