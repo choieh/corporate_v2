@@ -1,0 +1,218 @@
+#banner {
+  width: 100%;
+  height: 580px;
+  background: url(../img/banner.jpg) no-repeat center/cover fixed;
+
+  .inner {
+    @include inner();
+    height: 100%;
+    position: relative;
+
+    article {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      padding: 20px;
+
+      > div {
+        border-top: 1px dashed #000;
+        width: 48%;
+      }
+
+      .letter {
+        h2 {
+          @include fontTitle(500, 100px, auto, #000);
+          height: 120px;
+          border-bottom: 3px solid #222;
+        }
+      }
+    }
+
+    .conSt {
+      width: 33%;
+      left: 0;
+      top: 30%;
+
+      .subSt {
+        .top {
+          @include fontM(600, 26px, 1.2, #222);
+          height: 120px;
+          border-bottom: 3px solid #222;
+          padding-top: 10px;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+
+          span {
+            @include fontM(400, 18px, 1.2, #444);
+            display: block;
+            margin: 10px 0 20px;
+            text-transform: none;
+          }
+        }
+
+        .bottom {
+          @include fontM(400, 18px, 1.4, #222);
+          text-transform: capitalize;
+        }
+      }
+      .mainSt {
+        p {
+          @include fontTitle(500, 28px, 1.2, #111);
+          border-bottom: 3px solid #222;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .conUd {
+      width: 44%;
+      top: 10%;
+      left: 32%;
+
+      .subUd {
+        border-bottom: 3px solid #222;
+        padding-top: 10px;
+        .top {
+          @include fontM(600, 18px, auto, #333);
+          margin-bottom: 10px;
+        }
+
+        .bottom {
+          @include fontM(400, 28px, 1.2, #222);
+        }
+      }
+    }
+
+    .conIo {
+      width: 25%;
+      flex-direction: column;
+      top: 10%;
+      right: 0;
+      height: 80%;
+
+      div {
+        width: 100%;
+
+        &.subIo {
+          padding-top: 10px;
+          p {
+            @include fontM(400, 20px, 1.6, #222);
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* tablet */
+@media screen and (max-width: $tablet) {
+  #banner {
+    width: 100%;
+    height: 580px;
+
+    .inner {
+      width: 100%;
+      height: 100%;
+
+      article {
+        .letter {
+          h2 {
+            font-size: 85px;
+            line-height: 120px;
+          }
+        }
+      }
+
+      .conSt {
+        width: 100%;
+        top: 0;
+
+        .mainSt {
+          p {
+            font-size: 20px;
+            padding-bottom: 20px;
+          }
+        }
+      }
+
+      .conUd {
+        width: 100%;
+        top: 46%;
+        left: 0;
+      }
+
+      .conIo {
+        width: 100%;
+        flex-direction: row;
+        bottom: 0;
+        top: auto;
+        right: 0;
+        height: auto;
+
+        div {
+          width: 48%;
+        }
+      }
+    }
+  }
+}
+
+/* mobile */
+@media screen and (max-width: $mobile) {
+  #banner {
+    .inner {
+      article {
+        .letter {
+          h2 {
+            line-height: 120px;
+            font-size: 70px;
+          }
+        }
+      }
+
+      .conSt {
+        .subSt {
+          .top {
+            font-size: 20px;
+            span {
+              font-size: 16px;
+            }
+          }
+
+          .bottom {
+            font-size: 16px;
+          }
+        }
+
+        .mainSt {
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .conUd {
+        top: 45%;
+
+        .subUd {
+          .top {
+            font-size: 18px;
+          }
+
+          .bottom {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .conIo {
+        div.subIo {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
