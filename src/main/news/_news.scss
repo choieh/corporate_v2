@@ -3,15 +3,27 @@
   padding: 0 0 50px;
   .inner {
     @include inner();
+
     .recentNews {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid #000;
 
-      .pic img {
-        @include obfit();
-        filter: grayscale(1);
+      .pic {
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+        img {
+          @include obfit();
+          filter: grayscale(1);
+          transition: 0.5s;
+        }
       }
+
       .left {
         width: 40%;
         border-right: 1px solid #000;
