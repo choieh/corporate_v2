@@ -16,16 +16,17 @@
       border-right: 1px solid #222;
 
       h2 {
-        @include fontM(400, 40px, 1, #222);
-        margin-bottom: 20px;
+        @include fontM(400, 38px, 1, #222);
+        margin-bottom: 30px;
         letter-spacing: 1px;
       }
       p {
-        @include fontM(300, 20px, 1.4, #444);
-        margin-bottom: 40px;
+        @include fontM(300, 16px, 1.4, #444);
+        width: 80%;
+        margin: 0 auto 50px;
       }
       a {
-        @include fontM(400, 22px, 1, #333);
+        @include fontM(400, 18px, 1, #333);
         display: block;
         width: 200px;
         margin: 0 auto;
