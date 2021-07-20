@@ -161,6 +161,7 @@
 /* mobile */
 @media screen and (max-width: $mobile) {
   #banner {
+    background-attachment: initial;
     .inner {
       article {
         .letter {
