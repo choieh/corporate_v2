@@ -20,7 +20,7 @@
           height: 120px;
 
           span {
-            @include fontM(600, 15px, 1, #444);
+            @include fontM(600, 15px, 1, #888);
             vertical-align: super;
             margin-right: 10px;
           }
@@ -41,11 +41,16 @@
         h3 {
           @include fontM(400, 50px, 1.2, #444);
           letter-spacing: 1px;
-          margin-bottom: 100px;
+          margin-bottom: 130px;
+        }
+
+        h4 {
+          @include fontM(400, 18px, 1, #666);
+          margin-bottom: 20px;
         }
 
         p {
-          @include fontM(400, 18px, 1.6, #666);
+          @include fontM(300, 16px, 1.6, #888);
           letter-spacing: 1px;
           margin-bottom: 50px;
         }
@@ -70,7 +75,7 @@
 
       .crossPic {
         width: 28%;
-        height: 400px;
+        height: 420px;
 
         img {
           @include obfit();
