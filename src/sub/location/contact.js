@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
     e.currentTarget.contact_number.value = (Math.random() * 100000) | 0;
 
     emailjs
-      .sendForm('service_ahiqd2i', 'template_jy0rnnr', e.currentTarget) //
+      .sendForm('service_ahiqd2i', 'template_jy0rnnr', e.currentTarget)
       .then(
         (response) => {
           console.log('메일 발송 성공', response.status, response.text);
