@@ -46,7 +46,8 @@
 
         .txt {
           h3 {
-            @include fontM(400, 22px, 1.4, #444);
+            @include fontM(400, 18px, 1.4, #444);
+            word-break: break-word;
           }
 
           span {
@@ -73,6 +74,7 @@
 
           video {
             @include obfit();
+            filter: grayscale(1);
           }
         }
       }
