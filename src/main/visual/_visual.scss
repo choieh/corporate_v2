@@ -1,10 +1,257 @@
 #visual {
   width: 100%;
   height: calc(100vh - 120px);
-  background-color: #ddd;
+  background-color: #fff;
   position: relative;
   overflow: hidden;
   z-index: 1;
+
+  article {
+    position: absolute;
+    right: 0;
+    width: 95%;
+
+    &::after {
+      @include clear();
+    }
+  }
+
+  .txt {
+    top: 0;
+    height: 45%;
+
+    > div {
+      height: 100%;
+      float: left;
+      position: relative;
+    }
+
+    .titleTxt {
+      width: 30%;
+      padding: 30px 0;
+      margin-right: 3%;
+      overflow: hidden;
+
+      ul {
+        position: absolute;
+        top: 25%;
+        margin-left: -100%;
+
+        li {
+          float: left;
+          h2 {
+            @include fontM(400, 50px, 1.4, #444);
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .subTxt {
+      width: 55%;
+      padding: 20px;
+      overflow: hidden;
+
+      ul {
+        position: absolute;
+        top: 25%;
+        margin-left: -100%;
+
+        li {
+          float: left;
+
+          .txtInner {
+            h3 {
+              @include fontM(600, 22px, 1, #222);
+              width: 100%;
+              margin-bottom: 20px;
+            }
+
+            > div {
+              width: 45%;
+              float: left;
+
+              &.descript {
+                margin-right: 30px;
+              }
+              p {
+                @include fontM(300, 16px, 1.4, #555);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .index {
+      width: 12%;
+      overflow: hidden;
+
+      ul {
+        position: absolute;
+        bottom: 0;
+        margin-left: -100%;
+
+        li {
+          @include fontM(400, 60px, 1, #000);
+          float: left;
+        }
+      }
+    }
+  }
+
+  .pic {
+    top: 45%;
+    height: 50%;
+
+    > div {
+      width: 50%;
+      height: 80%;
+      float: left;
+      margin-top: 30px;
+    }
+
+    .leftPic {
+      width: 30%;
+      margin-right: 3%;
+      overflow: hidden;
+
+      ul {
+        height: 100%;
+        margin-left: -100%;
+
+        li {
+          height: 100%;
+          float: left;
+
+          &[data-index='1'] {
+            background-color: #111;
+          }
+          &[data-index='2'] {
+            background-color: #333;
+          }
+          &[data-index='3'] {
+            background-color: #555;
+          }
+          &[data-index='4'] {
+            background-color: #777;
+          }
+        }
+      }
+    }
+
+    .rightPic {
+      position: relative;
+      width: 67%;
+      overflow: hidden;
+
+      ul {
+        width: 400%;
+        height: 100%;
+        margin-left: -100%;
+
+        li {
+          width: 25%;
+          height: 100%;
+          float: left;
+
+          &[data-index='1'] {
+            background-color: #111;
+          }
+          &[data-index='2'] {
+            background-color: #333;
+          }
+          &[data-index='3'] {
+            background-color: #555;
+          }
+          &[data-index='4'] {
+            background-color: #777;
+          }
+        }
+      }
+
+      .btn {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        a {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+
+          span {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            width: 50px;
+            height: 1px;
+            background-color: #fff;
+
+            &::before {
+              content: '';
+              display: block;
+              width: 30px;
+              height: 1px;
+              background-color: inherit;
+              position: absolute;
+              transition: 0.5s;
+            }
+
+            &::after {
+              content: '';
+              display: block;
+              width: 30px;
+              height: 1px;
+              background-color: inherit;
+              position: absolute;
+              transition: 0.35s;
+            }
+          }
+
+          &.prev {
+            left: 30px;
+            span {
+              &::before {
+                transform: rotate(45deg);
+                top: 10px;
+                left: -5px;
+              }
+
+              &::after {
+                transform: rotate(-45deg);
+                top: -10px;
+                left: -5px;
+              }
+            }
+          }
+
+          &.next {
+            right: 30px;
+            span {
+              &::before {
+                transform: rotate(-45deg);
+                top: 10px;
+                right: -5px;
+              }
+
+              &::after {
+                transform: rotate(45deg);
+                top: -10px;
+                right: -5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* tablet */
