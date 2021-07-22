@@ -13,16 +13,31 @@
         flex-wrap: wrap;
 
         li {
-          @include fontM(400, 30px, 1, #444);
+          position: relative;
           width: 30%;
           padding: 15px 0;
           border-top: 1px solid #222;
-          height: 120px;
+          height: 140px;
 
           span {
-            @include fontM(600, 15px, 1, #888);
-            vertical-align: super;
-            margin-right: 10px;
+            @include fontM(600, 15px, 1, #999);
+            position: absolute;
+            top: 15px;
+            left: 0;
+          }
+
+          h2 {
+            @include fontM(400, 30px, 1, #444);
+            position: absolute;
+            top: 12px;
+            left: 30px;
+          }
+
+          p {
+            @include fontM(300, 16px, 1.4, #777);
+            position: absolute;
+            top: 60px;
+            left: 30px;
           }
         }
       }
