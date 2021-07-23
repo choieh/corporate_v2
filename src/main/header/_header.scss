@@ -9,9 +9,9 @@
 
   .inner {
     width: 95%;
-    position: absolute;
-    right: 0;
     height: 100px;
+    position: relative;
+    float: right;
 
     > h1 {
       width: 30%;
