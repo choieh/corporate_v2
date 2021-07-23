@@ -6,7 +6,8 @@
     @include inner();
 
     .brandPoint {
-      margin-bottom: 50px;
+      padding: 0;
+      margin-bottom: 100px;
       ul {
         display: flex;
         justify-content: space-between;
@@ -17,13 +18,39 @@
           width: 30%;
           padding: 15px 0;
           border-top: 1px solid #222;
-          height: 140px;
+          height: 150px;
+          cursor: pointer;
+
+          &:hover {
+            border-top-color: transparent;
+            video {
+              opacity: 1;
+            }
+
+            span,
+            p {
+              opacity: 0;
+            }
+
+            h2 {
+              color: #fff;
+            }
+          }
+
+          video {
+            @include obfit();
+            margin-top: -15px;
+            height: 130px;
+            opacity: 0;
+            transition: 0.35s;
+          }
 
           span {
             @include fontM(600, 15px, 1, #999);
             position: absolute;
             top: 15px;
             left: 0;
+            transition: 0.35s;
           }
 
           h2 {
@@ -31,6 +58,7 @@
             position: absolute;
             top: 12px;
             left: 30px;
+            transition: 0.35s;
           }
 
           p {
@@ -38,6 +66,7 @@
             position: absolute;
             top: 60px;
             left: 30px;
+            transition: 0.35s;
           }
         }
       }
