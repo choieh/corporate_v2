@@ -1,18 +1,24 @@
 #header {
   width: 100%;
   position: relative;
-  border-bottom: 1px solid #ddd;
   z-index: 2;
 
+  &::after {
+    @include clear();
+  }
+
   .inner {
-    @include inner();
-    position: relative;
-    height: 120px;
+    width: 95%;
+    position: absolute;
+    right: 0;
+    height: 100px;
 
     > h1 {
+      width: 30%;
       position: absolute;
       left: 0;
       bottom: 0;
+      margin-right: 3%;
       z-index: 5;
 
       a {
@@ -23,12 +29,16 @@
     }
 
     .menuWeb {
+      width: 67%;
+      height: 100%;
+      position: relative;
+      left: 33%;
+      bottom: 0;
       #gnb {
         position: absolute;
-        left: 50%;
+        width: 70%;
+        left: 0;
         bottom: 0;
-        transform: translateX(-50%);
-
         &::after {
           @include clear();
         }
@@ -238,8 +248,8 @@
             padding: 30px 0;
             background-color: #fff;
             position: absolute;
-            top: 46px;
-            left: -65%;
+            top: 45px;
+            left: -52%;
             display: none;
             border-bottom: 1px solid #ddd;
 
@@ -391,11 +401,11 @@
 
       .icon {
         position: absolute;
-        right: 0;
+        right: 8%;
         bottom: 0;
 
         a {
-          @include fontM(500, 15px, 45px, #444);
+          @include fontM(500, 18px, 45px, #444);
           margin-left: 30px;
           height: 45px;
         }
@@ -403,7 +413,7 @@
 
       .util {
         position: absolute;
-        right: 0;
+        right: 8%;
         top: 15px;
 
         &::after {
