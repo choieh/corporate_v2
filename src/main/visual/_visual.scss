@@ -11,6 +11,14 @@
     right: 0;
     width: 95%;
 
+    ul {
+      width: 400%;
+
+      li {
+        width: 25%;
+      }
+    }
+
     &::after {
       @include clear();
     }
@@ -35,13 +43,27 @@
       ul {
         position: absolute;
         top: 25%;
-        margin-left: -100%;
 
         li {
-          float: left;
-          h2 {
-            @include fontM(400, 50px, 1.4, #444);
-            text-transform: capitalize;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+
+          &.on {
+            opacity: 1;
+          }
+
+          > div {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+
+            h2 {
+              @include fontM(400, 50px, 1.4, #444);
+              text-transform: capitalize;
+              opacity: 0;
+            }
           }
         }
       }
@@ -55,10 +77,18 @@
       ul {
         position: absolute;
         top: 25%;
-        margin-left: -100%;
 
         li {
-          float: left;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: 0.5s ease-in;
+          transition-delay: 0.3s;
+
+          &.on {
+            opacity: 1;
+          }
 
           .txtInner {
             h3 {
@@ -88,13 +118,15 @@
       overflow: hidden;
 
       ul {
-        position: absolute;
-        bottom: 0;
-        margin-left: -100%;
-
         li {
           @include fontM(400, 60px, 1, #000);
-          float: left;
+          opacity: 0;
+          position: absolute;
+          bottom: 0;
+
+          &.on {
+            opacity: 1;
+          }
         }
       }
     }
