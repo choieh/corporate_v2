@@ -34,9 +34,12 @@
         height: 100px;
 
         p {
-          @include fontM(400, 14px, 1.4, #333);
+          @include fontM(400, 13px, 1.4, #333);
+          text-transform: uppercase;
+          letter-spacing: 1px;
           &:last-child {
             margin-top: 15px;
+            font-weight: 300;
           }
         }
       }
