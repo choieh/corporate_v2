@@ -4,9 +4,9 @@ $(document).ready(function () {
     let isMotion = $('.recentEvent').offset().top;
 
     if (currentPos >= isMotion - 400) {
-      counter('.eventItem .countG', 158, 20);
-      counter('.eventItem .countY', 67, 48);
-      counter('.eventItem .countE', 85, 40);
+      counter('.eventItem .countG', 158, 15);
+      counter('.eventItem .countY', 67, 35);
+      counter('.eventItem .countE', 85, 29);
     } else {
       if (currentPos == 0) {
         $('.eventItem h4').text('0');
