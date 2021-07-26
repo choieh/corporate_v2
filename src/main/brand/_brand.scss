@@ -167,10 +167,18 @@
         transform: translateX(100%);
         opacity: 0;
         transition: 0.5s 0.5s;
+        overflow: hidden;
 
-        img {
+        video {
           @include obfit();
           filter: grayscale(1);
+          transition: 0.5s;
+        }
+
+        &:hover {
+          video {
+            transform: scale(1.1);
+          }
         }
       }
 
