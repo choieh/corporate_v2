@@ -8,6 +8,7 @@
     .brandPoint {
       padding: 0;
       margin-bottom: 100px;
+
       ul {
         display: flex;
         justify-content: space-between;
@@ -17,12 +18,57 @@
           position: relative;
           width: 30%;
           padding: 15px 0;
-          border-top: 1px solid #222;
           height: 150px;
           cursor: pointer;
 
+          &::before {
+            @include drawLine(0%, 1px);
+            top: 0;
+            left: 0;
+          }
+
+          .point {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: 0.5s 0.5s;
+
+            video {
+              @include obfit();
+              margin-top: -15px;
+              height: 130px;
+              opacity: 0;
+              transition: 0.35s;
+            }
+
+            span {
+              @include fontM(600, 15px, 1, #999);
+              position: absolute;
+              top: 15px;
+              left: 0;
+              transition: 0.35s;
+            }
+
+            h2 {
+              @include fontM(400, 30px, 1, #444);
+              position: absolute;
+              top: 12px;
+              left: 30px;
+              transition: 0.35s;
+            }
+
+            p {
+              @include fontM(300, 16px, 1.4, #777);
+              position: absolute;
+              top: 60px;
+              left: 30px;
+              transition: 0.35s;
+            }
+          }
+
           &:hover {
             border-top-color: transparent;
+
             video {
               opacity: 1;
             }
@@ -36,52 +82,50 @@
               color: #fff;
             }
           }
+        }
+      }
 
-          video {
-            @include obfit();
-            margin-top: -15px;
-            height: 130px;
-            opacity: 0;
-            transition: 0.35s;
-          }
+      &.motion {
+        ul {
+          li {
+            .point {
+              opacity: 1;
+            }
 
-          span {
-            @include fontM(600, 15px, 1, #999);
-            position: absolute;
-            top: 15px;
-            left: 0;
-            transition: 0.35s;
-          }
-
-          h2 {
-            @include fontM(400, 30px, 1, #444);
-            position: absolute;
-            top: 12px;
-            left: 30px;
-            transition: 0.35s;
-          }
-
-          p {
-            @include fontM(300, 16px, 1.4, #777);
-            position: absolute;
-            top: 60px;
-            left: 30px;
-            transition: 0.35s;
+            &::before {
+              animation: line_w linear 0.5s forwards;
+            }
           }
         }
       }
     }
 
     .brandInfo {
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
       padding: 30px 0;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap-reverse;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        @include drawLine(0%, 1px);
+        top: 0;
+        left: 0;
+      }
+
+      &::after {
+        @include drawLine(0%, 1px);
+        bottom: 0;
+        left: 0;
+      }
 
       .infoTxt {
         width: 60%;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: 0.5s 0.5s;
+
         h3 {
           @include fontM(400, 50px, 1.2, #444);
           letter-spacing: 1px;
@@ -120,10 +164,26 @@
       .crossPic {
         width: 28%;
         height: 420px;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: 0.5s 0.5s;
 
         img {
           @include obfit();
           filter: grayscale(1);
+        }
+      }
+
+      &.motion {
+        &:before,
+        &::after {
+          animation: line_w linear 0.5s forwards;
+        }
+
+        .infoTxt,
+        .crossPic {
+          transform: translateX(0);
+          opacity: 1;
         }
       }
     }
