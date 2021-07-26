@@ -22,6 +22,15 @@
   font-family: 'Roboto', sans-serif;
 }
 
+@mixin drawLine($w, $h) {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #222;
+  width: $w;
+  height: $h;
+}
+
 @mixin inner() {
   width: 1180px;
   margin: 0 auto;
