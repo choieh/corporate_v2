@@ -540,23 +540,13 @@
 
             &:hover {
               &::after {
-                animation: line 0.7s linear forwards;
+                animation: line_w 0.7s linear forwards;
               }
             }
           }
         }
       }
     }
-  }
-}
-
-@keyframes line {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 100%;
   }
 }
 

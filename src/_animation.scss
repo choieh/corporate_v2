@@ -1,0 +1,31 @@
+//draw lines
+@keyframes line_w {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes line_h {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+//1px -> fill
+@keyframes line_fill {
+  0% {
+    height: 1px;
+  }
+
+  100% {
+    height: 100%;
+  }
+}

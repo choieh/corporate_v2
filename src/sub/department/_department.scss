@@ -156,15 +156,6 @@
   }
 }
 
-@keyframes line_fill {
-  0% {
-    height: 1px;
-  }
-
-  100% {
-    height: 100%;
-  }
-}
 /* tablet */
 @media screen and (max-width: $tablet) {
   .department {

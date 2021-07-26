@@ -204,15 +204,6 @@
   }
 }
 
-@keyframes line_vertical {
-  0% {
-    height: 0%;
-  }
-  100% {
-    height: 25vh;
-  }
-}
-
 /* tablet */
 @media screen and (max-width: $tablet) {
   .contact {
