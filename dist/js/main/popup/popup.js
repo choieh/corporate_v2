@@ -2,7 +2,7 @@ $(document).ready(function () {
   //load -> create popup
   createPop({
     name: '#popup',
-    data_url: '../data/pop.html',
+    data_url: 'data/pop.html',
     isMask: true,
     isCk: true,
     custom_css: {
