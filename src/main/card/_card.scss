@@ -1,21 +1,58 @@
 #card {
   padding: 50px 0 120px;
+
+  &.motion {
+    .inner {
+      &::before {
+        animation: line_w linear 0.5s forwards;
+      }
+
+      &::after {
+        animation: line_w linear 0.5s forwards;
+      }
+
+      h2 {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      article {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
   .inner {
     @include inner();
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-bottom: 1px solid #222;
     padding-bottom: 30px;
+    position: relative;
+
+    &::before {
+      @include drawLine(0%, 1px);
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      @include drawLine(0%, 1px);
+      bottom: 0;
+      left: 0;
+    }
 
     h2 {
-      @include fontM(400, 40px, 1.2, #444);
+      @include fontM(400, 45px, 1.2, #444);
       letter-spacing: 1px;
       text-align: right;
       width: 100%;
       margin-bottom: 50px;
       padding-top: 30px;
-      border-top: 1px solid #222;
+      transform: translateX(100%);
+      opacity: 0;
+      transition: 0.5s 0.5s;
     }
 
     article {
@@ -23,11 +60,13 @@
       padding: 20px;
       min-height: 500px;
       border-right: 1px solid #333;
-      transition: 0.5s;
       position: relative;
       z-index: 1;
       flex: 1;
       cursor: pointer;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: opacity 0.5s 0.5s, transform 0.5s 0.5s, flex 0.6s;
 
       &:last-child {
         border-right: none;
