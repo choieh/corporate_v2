@@ -7,7 +7,7 @@ $(document).ready(function () {
     isCk: true,
     custom_css: {
       width: 500,
-      backgroundColor: '#fff',
+      backgroundColor: '#000',
       padding: 40,
       boxSizing: 'border-box',
       color: '#fff',
