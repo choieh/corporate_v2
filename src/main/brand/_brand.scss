@@ -67,7 +67,9 @@
           }
 
           &:hover {
-            border-top-color: transparent;
+            &::before {
+              opacity: 0;
+            }
 
             video {
               opacity: 1;
