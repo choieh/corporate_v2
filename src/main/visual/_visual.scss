@@ -4,6 +4,114 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+
+  .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      padding: 0 5%;
+      position: relative;
+
+      .inner {
+        width: 100%;
+        height: 100%;
+
+        > div {
+          position: absolute;
+        }
+
+        .title {
+          width: 30vw;
+          left: 5%;
+          top: 10vh;
+
+          > div {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            padding: 15px 5px;
+            margin-bottom: 10px;
+
+            h2 {
+              @include fontM(600, 50px, 1, #333);
+              opacity: 0;
+            }
+          }
+        }
+
+        .desc {
+          right: 10%;
+          width: 50vw;
+          top: 10vh;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 20px 0;
+
+          h3 {
+            @include fontM(600, 24px, 1, #222);
+            width: 100%;
+            margin-bottom: 30px;
+          }
+
+          p {
+            @include fontM(300, 1.2vmax, 1.6, #555);
+            width: 46%;
+          }
+        }
+
+        .index {
+          top: 40%;
+          right: 5%;
+          @include fontM(500, 50px, 1, #111);
+        }
+
+        .leftPic {
+          left: 5%;
+          bottom: 10vh;
+          width: 30vw;
+          height: 30vh;
+          border: 1px solid #000;
+          overflow: hidden;
+
+          img {
+            @include obfit();
+          }
+        }
+
+        .rightPic {
+          right: 0;
+          bottom: 10vh;
+          width: 60vw;
+          height: 30vh;
+          border: 1px solid #000;
+          overflow: hidden;
+
+          img {
+            @include obfit();
+          }
+
+          .swiper-button-prev {
+            left: 30px;
+            bottom: 40%;
+            top: auto;
+            transform: scale(0.8);
+          }
+
+          .swiper-button-next {
+            right: 30px;
+            bottom: 40%;
+            top: auto;
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+  }
 }
 
 /* tablet */
