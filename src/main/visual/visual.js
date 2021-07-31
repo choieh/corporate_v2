@@ -46,6 +46,24 @@ $(document).ready(function () {
       opacity: [0, 1],
       easing: 'easeInOutQuart',
     });
+
+    anime({
+      targets: '.swiper-slide-active .swiper-button-next',
+      translateX: [50, 0],
+      scale: [1, 0.8],
+      delay: 2000,
+      opacity: [0, 1],
+      easing: 'easeInOutQuart',
+    });
+
+    anime({
+      targets: '.swiper-slide-active .swiper-button-prev',
+      translateX: [-50, 0],
+      scale: [1, 0.8],
+      delay: 2000,
+      opacity: [0, 1],
+      easing: 'easeInOutQuart',
+    });
   });
 
   //load animation
@@ -77,6 +95,24 @@ $(document).ready(function () {
     targets: '.swiper-slide-active .rightPic img',
     scale: [1.2, 1],
     delay: 1500,
+    opacity: [0, 1],
+    easing: 'easeInOutQuart',
+  });
+
+  anime({
+    targets: '.swiper-slide-active .swiper-button-next',
+    translateX: [50, 0],
+    scale: [1, 0.8],
+    delay: 2000,
+    opacity: [0, 1],
+    easing: 'easeInOutQuart',
+  });
+
+  anime({
+    targets: '.swiper-slide-active .swiper-button-prev',
+    translateX: [-50, 0],
+    scale: [1, 0.8],
+    delay: 2000,
     opacity: [0, 1],
     easing: 'easeInOutQuart',
   });
