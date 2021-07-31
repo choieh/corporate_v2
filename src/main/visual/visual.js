@@ -1,6 +1,7 @@
 $(document).ready(function () {
   const prev = $('.swiper-button-prev');
   const next = $('.swiper-button-next');
+
   const swiper = new Swiper('#visual', {
     loop: true,
     effect: 'fade',
@@ -84,27 +85,17 @@ $(document).ready(function () {
   slidingTxt('.swiper-slide-active .titText1', 500, 0);
   slidingTxt('.swiper-slide-active .titText2', 500, 200);
 
-  //swiper prev btn event
-  $(prev).on('click', function () {
+  //swiper change -> sliding Text event
+  swiper.on('slideChangeTransitionStart', function () {
     slidingTxt('.swiper-slide-active .titText1', 500, 0);
     slidingTxt('.swiper-slide-active .titText2', 500, 200);
-
-    $('h2').css({ opacity: 0 });
-  });
-
-  //swiper next btn event
-  $(next).on('click', function () {
-    slidingTxt('.swiper-slide-active .titText1', 500, 0);
-    slidingTxt('.swiper-slide-active .titText2', 500, 200);
-
-    $('h2').css({ opacity: 0 });
   });
 
   //sliding function
   function slidingTxt(el, speed, delay) {
     let ease = 'easeInExpo';
-    let bgColor = $(el).attr('data-color');
     $(el).find('h2').css({ opacity: 0 });
+    let bgColor = $(el).attr('data-color');
     $(el).append(
       $("<em class='mask'>").css({
         display: 'block',
