@@ -1,4 +1,5 @@
 #popup {
+  width: 500px;
   .popContent {
     background-color: #000;
     width: 100%;
@@ -25,5 +26,10 @@
     right: 40px;
     bottom: 50px;
     color: #fff;
+  }
+}
+@media screen and (max-width: $mobile) {
+  #popup {
+    width: 300px;
   }
 }

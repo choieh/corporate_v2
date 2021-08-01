@@ -6,7 +6,6 @@ $(document).ready(function () {
     isMask: true,
     isCk: true,
     custom_css: {
-      width: 500,
       backgroundColor: '#000',
       padding: 40,
       boxSizing: 'border-box',
