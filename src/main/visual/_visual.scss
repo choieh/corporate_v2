@@ -27,7 +27,7 @@
         .title {
           width: 30vw;
           left: 5%;
-          top: 10vh;
+          top: 10%;
 
           > div {
             position: relative;
@@ -39,6 +39,7 @@
             h2 {
               @include fontM(600, 50px, 1, #333);
               opacity: 0;
+              text-transform: capitalize;
             }
           }
         }
@@ -46,7 +47,7 @@
         .desc {
           right: 10%;
           width: 50vw;
-          top: 10vh;
+          top: 8%;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
@@ -72,7 +73,7 @@
 
         .leftPic {
           left: 5%;
-          bottom: 10vh;
+          bottom: 8vh;
           width: 30vw;
           height: 32vh;
           overflow: hidden;
@@ -84,7 +85,7 @@
 
         .rightPic {
           right: 0;
-          bottom: 10vh;
+          bottom: 8vh;
           width: 60vw;
           height: 32vh;
           overflow: hidden;
@@ -92,19 +93,136 @@
           img {
             @include obfit();
           }
+        }
+      }
+    }
 
-          .swiper-button-prev {
-            left: 30px;
-            bottom: 40%;
-            top: auto;
-            filter: grayscale(100%);
+    .btn {
+      width: 60vw;
+      height: 50px;
+      position: absolute;
+      right: 0;
+      top: 35vh;
+
+      > div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        z-index: 3;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          display: block;
+          width: 50%;
+          height: 2px;
+          background-color: #000;
+          transition: 0.7s;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          display: block;
+          width: 50%;
+          height: 2px;
+          background-color: #000;
+          transition: 0.7s;
+        }
+
+        span {
+          @include fontM(400, 30px, 1, #111);
+          position: absolute;
+          top: 50%;
+          opacity: 0;
+          transition: all 0.5s;
+          z-index: 2;
+        }
+      }
+
+      .swiper-button-prev {
+        left: -20px;
+
+        &::before {
+          left: 0;
+          transform: rotate(-30deg);
+          transform-origin: left center;
+        }
+
+        &::after {
+          left: 0;
+          transform: rotate(30deg);
+          transform-origin: left center;
+        }
+
+        span {
+          left: 50%;
+          transform: translate(100%, -50%);
+        }
+
+        &:hover {
+          &::before {
+            transform: rotate(-180deg);
+            transform-origin: center center;
+            top: 2px;
+            width: 100%;
           }
 
-          .swiper-button-next {
-            right: 30px;
-            bottom: 40%;
-            top: auto;
-            filter: grayscale(1);
+          &::after {
+            transform: rotate(180deg);
+            transform-origin: center center;
+            top: 98px;
+            width: 100%;
+          }
+
+          span {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+          }
+        }
+      }
+
+      .swiper-button-next {
+        left: 30px;
+
+        &::before {
+          right: 0;
+          transform: rotate(30deg);
+          transform-origin: right center;
+        }
+        &::after {
+          right: 0;
+          transform: rotate(-30deg);
+          transform-origin: right center;
+        }
+
+        span {
+          right: 50%;
+          transform: translate(-100%, -50%);
+        }
+
+        &:hover {
+          &::before {
+            transform: rotate(180deg);
+            transform-origin: center center;
+            top: 2px;
+            width: 100%;
+          }
+
+          &::after {
+            transform: rotate(-180deg);
+            transform-origin: center center;
+            top: 98px;
+            width: 100%;
+          }
+
+          span {
+            transform: translate(50%, -50%);
+            opacity: 1;
           }
         }
       }
@@ -115,10 +233,138 @@
 /* tablet */
 @media screen and (max-width: $tablet) {
   #visual {
-    height: calc(100vh - 100px);
+    .swiper-wrapper {
+      .swiper-slide {
+        .inner {
+          .title {
+            width: 100vw;
+            top: 0;
+
+            > div {
+              padding: 10px 5px;
+              h2 {
+                font-size: 40px;
+              }
+            }
+          }
+
+          .desc {
+            right: 5%;
+            width: 45vw;
+            top: 23vh;
+            padding: 0;
+
+            h3 {
+              margin-bottom: 10px;
+              font-size: 20px;
+            }
+
+            p {
+              width: 100%;
+              font-size: 12px;
+            }
+          }
+
+          .index {
+            top: 54%;
+          }
+
+          .leftPic {
+            bottom: 31vh;
+            width: 40vw;
+          }
+
+          .rightPic {
+            bottom: 0vh;
+            width: 95vw;
+            height: 30vh;
+          }
+        }
+      }
+
+      .btn {
+        width: 50vw;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: 46vh;
+
+        > div {
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+    }
   }
 }
 
 /* mobile */
 @media screen and (max-width: $mobile) {
+  #visual {
+    .swiper-wrapper {
+      .swiper-slide {
+        .inner {
+          .title {
+            width: 100vw;
+            top: 0;
+
+            > div {
+              padding: 5px;
+              h2 {
+                font-size: 35px;
+              }
+            }
+          }
+
+          .desc {
+            top: 21vh;
+
+            h3 {
+              margin-bottom: 10px;
+              font-size: 18px;
+            }
+
+            p {
+              font-size: 10px;
+            }
+          }
+
+          .index {
+            top: 55%;
+            font-size: 40px;
+          }
+
+          .leftPic {
+            bottom: 33vh;
+            width: 40vw;
+          }
+
+          .rightPic {
+            bottom: 0vh;
+            width: 95vw;
+            height: 30vh;
+          }
+        }
+      }
+
+      .btn {
+        width: 50vw;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: 46vh;
+
+        > div {
+          span {
+            font-size: 24px;
+          }
+        }
+
+        .swiper-button-next {
+          left: 5px;
+        }
+      }
+    }
+  }
 }
