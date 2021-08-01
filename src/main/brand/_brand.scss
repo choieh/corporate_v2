@@ -242,12 +242,19 @@
 /* mobile */
 @media screen and (max-width: $mobile) {
   #mBrand {
-    padding: 100px 20px;
+    padding: 70px 20px;
     .inner {
       .brandPoint {
+        margin-bottom: 70px;
         ul {
           li {
             width: 100%;
+
+            .point {
+              p {
+                font-size: 12px;
+              }
+            }
           }
         }
       }

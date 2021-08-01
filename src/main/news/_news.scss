@@ -366,13 +366,19 @@
 
       .recentEvent {
         ul li {
-          p {
-            font-size: 16px;
-          }
+          .eventItem {
+            p {
+              font-size: 16px;
+            }
 
-          h4,
-          a {
-            bottom: 30px;
+            h4,
+            a {
+              bottom: 0;
+            }
+
+            h4 {
+              font-size: 40px;
+            }
           }
         }
       }

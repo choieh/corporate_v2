@@ -35,7 +35,7 @@
       position: relative;
 
       &::after {
-        @include drawLine(1px, 100%);
+        @include drawLine(1px, 0%);
         top: 0;
         right: 0;
       }
