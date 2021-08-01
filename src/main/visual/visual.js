@@ -1,15 +1,12 @@
 $(document).ready(function () {
-  const prev = $('.swiper-button-prev');
-  const next = $('.swiper-button-next');
-
   const swiper = new Swiper('#visual', {
     loop: true,
     effect: 'fade',
     speed: 800,
 
     navigation: {
-      nextEl: '.rightPic .swiper-button-next',
-      prevEl: '.rightPic .swiper-button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
 
@@ -48,18 +45,18 @@ $(document).ready(function () {
     });
 
     anime({
-      targets: '.swiper-slide-active .swiper-button-next',
+      targets: '.swiper-button-next',
       translateX: [50, 0],
-      scale: [1, 0.8],
+      scale: [0.3, 0.5],
       delay: 2000,
       opacity: [0, 1],
       easing: 'easeInOutQuart',
     });
 
     anime({
-      targets: '.swiper-slide-active .swiper-button-prev',
+      targets: '.swiper-button-prev',
       translateX: [-50, 0],
-      scale: [1, 0.8],
+      scale: [0.3, 0.5],
       delay: 2000,
       opacity: [0, 1],
       easing: 'easeInOutQuart',
@@ -100,18 +97,18 @@ $(document).ready(function () {
   });
 
   anime({
-    targets: '.swiper-slide-active .swiper-button-next',
+    targets: ' .swiper-button-next',
     translateX: [50, 0],
-    scale: [1, 0.8],
+    scale: [0.3, 0.5],
     delay: 2000,
     opacity: [0, 1],
     easing: 'easeInOutQuart',
   });
 
   anime({
-    targets: '.swiper-slide-active .swiper-button-prev',
+    targets: ' .swiper-button-prev',
     translateX: [-50, 0],
-    scale: [1, 0.8],
+    scale: [0.3, 0.5],
     delay: 2000,
     opacity: [0, 1],
     easing: 'easeInOutQuart',
