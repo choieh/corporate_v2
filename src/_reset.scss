@@ -39,7 +39,9 @@ select {
   opacity: 0;
 }
 
+html,
 body {
+  position: relative;
   font-family: 'Lato', sans-serif;
   overflow-x: hidden;
 }

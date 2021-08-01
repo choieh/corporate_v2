@@ -29,7 +29,7 @@
     }
 
     .menuWeb {
-      width: 67%;
+      width: 60vw;
       height: 100%;
       position: absolute;
       right: 0;
@@ -37,8 +37,8 @@
 
       #gnb {
         position: absolute;
-        width: 70%;
-        left: 0;
+        width: 80%;
+        left: -20px;
         bottom: 0;
 
         &::after {
@@ -74,7 +74,7 @@
                 }
               }
               .block {
-                @include fontM(300, 16px, 1.4, #222);
+                @include fontM(300, 14px, 1.6, #222);
                 letter-spacing: 1px;
                 text-align: right;
                 margin-top: 0;
@@ -251,7 +251,8 @@
             background-color: #fff;
             position: absolute;
             top: 45px;
-            right: -20.4%;
+            left: 0;
+            transform: translateX(-35%);
             display: none;
             border-bottom: 1px solid #ddd;
 
@@ -263,7 +264,7 @@
             &::before {
               content: '';
               display: block;
-              width: calc((100vw - 80vw) / 2);
+              width: 100%;
               height: 100%;
               position: absolute;
               top: 0;
@@ -275,7 +276,7 @@
             &::after {
               content: '';
               display: block;
-              width: calc((100vw - 80vw) / 2);
+              width: 100%;
               height: 100%;
               position: absolute;
               top: 0;
@@ -289,6 +290,7 @@
               float: left;
               width: 24%;
               height: 100%;
+              border-right: 1px solid #222;
 
               div {
                 position: relative;
